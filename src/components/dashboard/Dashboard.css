@@ -1,0 +1,12 @@
+.dashboard {
+  margin-top: 3em;
+  font-size: 1.3em;
+}
+
+#projects {
+  padding: 0; 
+}
+
+.nav i.material-icons {
+  font-size: 3em;
+}
