@@ -30,11 +30,11 @@ class SignUp extends Component {
             <div className="row">
               <div className="input-field col s6">
                 <input onChange={this.handleChange} id="firstName" type="text" className="validate" />
-                <label htmlFor="first_name">First Name</label>
+                <label htmlFor="firstName">First Name</label>
               </div>
               <div className="input-field col s6">
                 <input onChange={this.handleChange} id="lastName" type="text" className="validate" />
-                <label htmlFor="last_name">Last Name</label>
+                <label htmlFor="lastName">Last Name</label>
               </div>
             </div>
             <div className="row">

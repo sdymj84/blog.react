@@ -10,6 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('/img/white.jpg') no-repeat bottom fixed / cover;
 }
 
 code {

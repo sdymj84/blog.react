@@ -1,13 +1,13 @@
 import React from 'react'
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const SignedInNavbar = () => {
   return (
-    <div>
+    <ul className="right hide-on-med-and-down">
       <li><NavLink to='/'>Dashboard</NavLink></li>
-      <li><NavLink to='/'>Create new post</NavLink></li>
+      <li><NavLink to='/create'>Create new post</NavLink></li>
       <li><NavLink to='/'>MY</NavLink></li>
-    </div>
+    </ul>
   )
 }
 
