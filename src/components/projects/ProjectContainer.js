@@ -5,11 +5,13 @@ import ProjectSummary from './ProjectSummary';
 const ProjectContainer = ({ projects }) => {
   return (
     <div className="col s12 m6 project-container section" id="projects">
-      <Link to='/'>
-        {projects && projects.map(project => {
-          return <ProjectSummary key={project.id} project={project} />
-        })}
-      </Link>
+      {projects && projects.map(project => {
+        return (
+          <Link to={`/project/${project.id}`} key={project.id}>
+            <ProjectSummary project={project} />
+          </Link>
+        )
+      })}
     </div>
   )
 }
