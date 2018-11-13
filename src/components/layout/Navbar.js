@@ -2,6 +2,7 @@ import React from 'react'
 import SignedInNavbar from './SignedInNavbar';
 import SignedOutNavbar from './SignedOutNavbar';
 import { Link } from 'react-router-dom'
+import { connect } from "react-redux";
 
 const Navbar = () => {
   return (
@@ -12,17 +13,6 @@ const Navbar = () => {
           <Link to='/' className="brand-logo">BLOG</Link>
           <SignedInNavbar />
           <SignedOutNavbar />
-          {/* <a href="#" data-target="mobile-links" className="sidenav-trigger">
-              <i className="large material-icons">menu</i>
-            </a>
-            <ul className="right hide-on-med-and-down">
-              <Route path='/user' component={SignedInNavbar} />
-              <Route exact path='/' component={SignedOutNavbar} />
-            </ul>
-            <ul className="sidenav" id="mobile-links">
-              <Route path='/user' component={SignedInNavbar} />
-              <Route exact path='/' component={SignedOutNavbar} />
-            </ul> */}
         </div>
       </div>
 
@@ -31,4 +21,11 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+const mapStateToProps = (state) => {
+  console.log(state)
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps)(Navbar)
