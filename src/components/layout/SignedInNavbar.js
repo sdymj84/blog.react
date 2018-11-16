@@ -5,10 +5,10 @@ import { signOut } from "../../actions/authActions";
 
 const SignedInNavbar = (props) => {
   return (
-    <ul className="right hide-on-med-and-down">
+    <ul>
       <li><NavLink to='/'>Dashboard</NavLink></li>
       <li><NavLink to='/create'>Create new post</NavLink></li>
-      <li><NavLink to='/'>MY</NavLink></li>
+      <li><NavLink to='/' className="btn-floating red lighten-1 center">{props.initials}</NavLink></li>
       <li><NavLink to='/' onClick={() => props.signOut()}>SignOut</NavLink></li>
     </ul>
   )

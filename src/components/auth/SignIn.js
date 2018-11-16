@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { signIn } from "../../actions/authActions";
+import { Redirect } from "react-router-dom";
 
 class SignIn extends Component {
   state = {
@@ -21,7 +22,9 @@ class SignIn extends Component {
   }
 
   render() {
-    const { authError } = this.props
+    const { authError, auth } = this.props
+    if (auth.uid) return <Redirect to='/' />
+
     return (
       <div className="container auth">
         <div className="red-text center">
@@ -54,15 +57,16 @@ class SignIn extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapStateToProps = (state) => {
   return {
-    signIn: (credentials) => dispatch(signIn(credentials))
+    auth: state.firebase.auth,
+    authError: state.auth.authError
   }
 }
 
-const mapStateToProps = (state) => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    authError: state.auth.authError
+    signIn: (credentials) => dispatch(signIn(credentials))
   }
 }
 
