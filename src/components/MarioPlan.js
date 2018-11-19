@@ -10,7 +10,7 @@ import CreateProject from './projects/CreateProject';
 class MarioPlan extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div>
           <Navbar />
           <Switch>
