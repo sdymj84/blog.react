@@ -8,7 +8,7 @@ const Navbar = (props) => {
   const links = !props.auth.uid ?
     <SignedOutNavbar /> : <SignedInNavbar initials={props.initials} />
   return (
-    <div className="navbar-fixed">
+    <div>
       <nav>
         <div className="nav-wrapper grey darken-3">
           <div className="container">
