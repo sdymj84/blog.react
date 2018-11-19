@@ -1,5 +1,6 @@
 # blog.react
 ### Simple blog page
+### Check out the live app here: [Blog](https://sdymj84.github.io/blog.react/)
 ---
 
 ## Skills
