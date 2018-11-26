@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NotificationContainer from './NotificationContainer';
+import Notification from './Notification';
 import ProjectContainer from '../projects/ProjectContainer'
 import './Dashboard.css'
 import { connect } from "react-redux";
@@ -16,7 +16,7 @@ export class Dashboard extends Component {
       <div className="container dashboard">
         <div className="row">
           <ProjectContainer projects={this.props.projects} />
-          <NotificationContainer />
+          <Notification />
         </div>
       </div>
     )
