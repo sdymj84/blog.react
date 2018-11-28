@@ -21,3 +21,7 @@ code {
 .auth {
   margin-top: 3em;
 }
+
+.smaller-text {
+  font-size: 0.8em;
+}
